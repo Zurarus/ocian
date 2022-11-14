@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar-style {
+    box-shadow: 0 5px 10px #efefef;
+}
+.logo{
+    width: 250px;
+    cursor: pointer;
+    margin-left: -50px;
+}
+.T1{
+    position: relative;
+    text-align: center;
+    top: 100px;
+    color: red;
+}
+
+.slider{
+    max-width: 50%;
+    /* The position of the element is set relative to its original position: */
+    position: relative;
+    /* Center horizontally: */
+    margin: 120px;
+    height: 370px;
+    right: -270px;
+}
+/* The picture is scaled in relation to the parent element: */
+.slider .item img {
+    /* The element is resized to fill the block and maintain proportions: */
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    border-radius: 50%;
+}
+/* Back and forward buttons: */
+.slider .previous, .slider .next {
+    /* Adds an icon to the cursor when it is over the button: */
+    cursor: pointer;
+    /* The position of the element is set relative to the borders of the browser: */
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    /* Styling the buttons themselves: */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    /* Background fading on hover: */
+    transition: 0.6s ease;
+    /* Rounding the borders: */
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* When you hover over the buttons, add the background of the buttons: */
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/* Slide animation: */
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    /* Set and change the transparency: */
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
